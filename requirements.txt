@@ -1,0 +1,11 @@
+# required python version
+python_version >= 3.8.10
+
+# list of required packages
+captum==0.6.0
+geopandas==0.12.0
+matplotlib==3.1.2
+numpy==1.23.1
+pandas==1.4.3
+scikit-learn==1.1.2
+torch==2.2.2

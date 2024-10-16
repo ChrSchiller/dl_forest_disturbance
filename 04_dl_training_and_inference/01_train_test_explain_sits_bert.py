@@ -14,6 +14,10 @@ from trainer.trainer import SBERTTrainer
 from dataset.pretrain_dataset import PretrainDataset
 from dataset.finetune_dataset import FinetuneDataset
 from model.classification_model import SBERTClassification
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, classification_report
+from utils.early_stopper import EarlyStopper
+from utils.preprocess_datasets_pretraining import preprocess_datasets_pretraining
+from utils.preprocess_datasets_finetuning import preprocess_datasets_finetuning
 
 import numpy as np
 import argparse
@@ -23,10 +27,6 @@ import matplotlib.pyplot as plt
 from matplotlib import cm, pyplot as plt
 import pandas as pd
 import warnings
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, classification_report
-from utils.early_stopper import EarlyStopper
-from utils.preprocess_datasets_pretraining import preprocess_datasets_pretraining
-from utils.preprocess_datasets_finetuning import preprocess_datasets_finetuning
 
 ### set seed
 def setup_seed(seed):
