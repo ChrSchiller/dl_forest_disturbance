@@ -11,7 +11,6 @@ If you use our work, please cite the paper as follows:
 
 ```
 
-
 Link to the publication: 
 
 ## Requirements
@@ -39,7 +38,7 @@ Rscript ./01_prepare_datasets/01_acquire_meta_forwind.R &&
 Rscript ./01_prepare_datasets/01_acquire_meta_senf.R
 ```
 
-and so on. Note that you need to download the raw datasets beforehand (see paper for details) and change the directories according to your needs. The code in 02_get_times directory needs to be executed for each dataset once - choose pre-training and finetuning code accordingly. WHile the pretraining data is openly accessible already, the finetuning data can be made available upon reasonable request.
+and so on. Note that you need to download the raw datasets beforehand (see paper for details) and change the directories according to your needs. The code in 02_get_times directory needs to be executed for each dataset once - choose pre-training and finetuning code accordingly. While the pretraining data is openly accessible already, the finetuning data can be made available upon reasonable request.
 
 Note: The dataset preparation code requires a Sentinel-2 datacube preprocessed using the FORCE algorithm (https://force-eo.readthedocs.io/en/latest/index.html), e.g. as available on the EO-Lab platform (https://eo-lab.org/en/; https://github.com/CODE-DE-EO-Lab/community_FORCE) for Germany. 
 
@@ -48,7 +47,9 @@ Note: The dataset preparation code requires a Sentinel-2 datacube preprocessed u
 
 
 
+## Disclosure
 
+This code is strongly based on the repository https://github.com/linlei1214/SITS-BERT. All credits to the authors of this publication and repository. Thank you very much!
 
 
 
