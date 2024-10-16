@@ -42,14 +42,24 @@ and so on. Note that you need to download the raw datasets beforehand (see paper
 
 Note: The dataset preparation code requires a Sentinel-2 datacube preprocessed using the FORCE algorithm (https://force-eo.readthedocs.io/en/latest/index.html), e.g. as available on the EO-Lab platform (https://eo-lab.org/en/; https://github.com/CODE-DE-EO-Lab/community_FORCE) for Germany. 
 
-### Deep Learning training and testing
+### Deep Learning Training and Testing
 
 
 
+### Trained (Finetuned) Models
+
+We provide the trained (in this case: finetuned) Transformer models of one of the three seeds of the study in `./trained_models`. 
+The naming of the files is done using the following convention: "dl_forest_disturbance_" + [model setup] + "_" + [spatial holdout for testing] + ".tar". The models can be used for inference or further tuning given the code in this repository. 
+Model setups are: 
+- "vi_false" for the setup with only Sentinel-2 (S2) bands and no vegetation indices (VIs), called "DL base" in the paper
+- "vi_true" for the setup with ten S2 bands and ten VIs, called "DL +IND" in the paper
+- "vi_only" for the setup with only ten VIs, called "DL IND" in the paper
+
+Spatial hold-outs are bb/nrw/rlp/lux/sax/thu if Brandenburg/Northrhine-Westphalia/Rhineland-Palatinate/Luxembourg/Saxony/Thuringia AOI was used for testing.
 
 ## Disclosure
 
-This code is strongly based on the repository https://github.com/linlei1214/SITS-BERT. All credits to the authors of this publication and repository. Thank you very much!
+This code is strongly based on the repository https://github.com/linlei1214/SITS-BERT, as we use the SITS-BERT model as backbone. All credits to the authors of this publication and repository. Thank you very much!
 
 
 
