@@ -45,12 +45,11 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--train', type=bool, default=True)
 parser.add_argument('--test', type=bool, default=True)
 parser.add_argument('--explain', type=bool, default=True)
-parser.add_argument('--target_aoi', type=str, required=True, default='lux')
-parser.add_argument('--indices', type=str, required=True)
 parser.add_argument('--num_workers', type=int, default=65)
-parser.add_argument('--pretrained', type=bool, default=False)
 parser.add_argument('--indices', type=bool, default=False)
 parser.add_argument('--only_indices', type=bool, default=False)
+parser.add_argument('--pretrained', type=bool, default=False)
+parser.add_argument('--target_aoi', type=str, required=True, default='lux') # ignored in pre-training
 
 ### general info
 parser.add_argument('--input_data_path', type=str, required=True, default='/path/to/data')
