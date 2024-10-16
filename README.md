@@ -44,7 +44,29 @@ Note: The dataset preparation code requires a Sentinel-2 datacube preprocessed u
 
 ### Deep Learning Training and Testing
 
+First, prepare the dataset for model training (with the appropriate input and output paths) using
 
+```
+python ./03_prepare_ts_for_dl/01_prepare_ts_for_dl.py
+```
+
+Afterwards, we can pre-train the model (example of "DL base" setup):
+
+```
+python ./04_dl_training_and_inference/01_train_test_explain_sits_bert.py --indices False --pretrained False --input_data_path <output_path_from_previous_script>
+```
+
+Finally, we can finetune the model on the finetuning data and select a spatial hold-out for testing (example of "DL base" setup and LUX AOI as spatial hold-out):
+```
+python ./04_dl_training_and_inference/01_train_test_explain_sits_bert.py --indices False --pretrained True --target_aoi lux --input_data_path <same_as_previous_script> 
+```
+
+Accepted combinations of the --indices and --only_indices arguments are: 
+- --indices False for DL base (raises exception if --only_indices is set to True)
+- --indices True and --only_indices True for DL IND
+- --indices True and --only_indices False for DL +IND
+
+Please see the paper for details on the other arguments passed to the scripts. 
 
 ### Trained (Finetuned) Models
 
