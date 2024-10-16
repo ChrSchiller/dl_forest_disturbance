@@ -13,6 +13,8 @@ If you use our work, please cite the paper as follows:
 
 Link to the publication: 
 
+Please also note our disclosure statement below, since much of the code was adopted from the SITS-BERT paper, which deserves credit. 
+
 ## Requirements
 
 To use the code, install Python 3.8.10 and the packages specified in requirements.txt using the following commands: 
