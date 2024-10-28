@@ -7,13 +7,21 @@ This is the code supporting the publication of Schiller et al. (2024) in Remote 
 If you use our work, please cite the paper as follows: 
 
 ```
-@ARTICLE{}
+@article{schiller2024forest,
+  title={Forest disturbance detection in Central Europe using transformers and Sentinel-2 time series},
+  author={Schiller, Christopher and K{\"o}ltzow, Jonathan and Schwarz, Selina and Schiefer, Felix and Fassnacht, Fabian Ewald},
+  journal={Remote Sensing of Environment},
+  volume={315},
+  pages={114475},
+  year={2024},
+  publisher={Elsevier}
+}
 
 ```
 
-Link to the publication: 
+Link to the publication: https://www.sciencedirect.com/science/article/pii/S0034425724005017
 
-Please also note our disclosure statement below, since much of the code was adopted from the SITS-BERT paper, which deserves credit. 
+Please also note our disclosure statement below, since much of the code was adopted from the SITS-BERT paper, which deserves credit (https://ieeexplore.ieee.org/abstract/document/9252123)
 
 ## Requirements
 
